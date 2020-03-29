@@ -1,0 +1,35 @@
+version: '3.2'
+
+networks:
+  pomodoro-network:
+    driver: bridge
+
+
+services:
+  db:
+    container_name: pomodoro-db
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: dev
+    networks:
+      - pomodoro-network
+    volumes:
+      - type: bind
+        source: /pomodoro/db
+        target: /var/lib/postgresql/data
+
+  ap:
+    image: pomodoro-image
+    container_name: pomodoro-app
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+    networks:
+      - pomodoro-network

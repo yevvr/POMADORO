@@ -1,0 +1,42 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: yevvr
+      changes:
+        changes:
+          - createTable:
+              tableName: POMODORO
+              columns:
+                - column:
+                    name: ID
+                    type: bigint
+                    autoIncrement: true
+                    constraints:
+                      primaryKey: true
+                      nullable: false
+                - column:
+                    name: GOAL_ID
+                    type: bigint
+                - column:
+                    name: DESCRIPTION
+                    type: nvarchar(256)
+                - column:
+                    name: START_TIME
+                    type: timestamp
+                    constraints:
+                      nullable: false
+                - column:
+                    name: UPDATED_TIME
+                    type: timestamp
+                    constraints:
+                      nullable: false
+                - column:
+                    name: DURATION_TIME
+                    type: timestamp
+                    constraints:
+                      nullable: false
+                - column:
+                    name: STATUS
+                    type: int
+                    constraints:
+                      nullable: false

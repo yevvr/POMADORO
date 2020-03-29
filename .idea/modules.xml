@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/pomodoro.iml" filepath="$PROJECT_DIR$/pomodoro.iml" group="pomodoro" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pomodoro_main.iml" filepath="$PROJECT_DIR$/.idea/modules/pomodoro_main.iml" group="pomodoro" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pomodoro_test.iml" filepath="$PROJECT_DIR$/.idea/modules/pomodoro_test.iml" group="pomodoro" />
+    </modules>
+  </component>
+</project>

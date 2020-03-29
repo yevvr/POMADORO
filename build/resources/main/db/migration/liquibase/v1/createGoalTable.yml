@@ -1,0 +1,49 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: yevvr
+      changes:
+        changes:
+          - createTable:
+              tableName: GOAL
+              columns:
+                - column:
+                    name: ID
+                    type: bigint
+                    autoIncrement: true
+                    constraints:
+                      primaryKey: true
+                      nullable: false
+                - column:
+                    name: USER_ID
+                    type: bigint
+                    constraints:
+                      nullable: false
+                - column:
+                    name: DESCRIPTION
+                    type: nvarchar(256)
+                - column:
+                    name: CREATION_TIMESTAMP
+                    type: timestamp
+                    constraints:
+                      nullable: false
+                - column:
+                    name: UPDATE_TIMESTAMP
+                    type: timestamp
+                    constraints:
+                      nullable: false
+                - column:
+                    name: EXPECTED_TIME
+                    type: bigint
+                    constraints:
+                      nullable: false
+                - column:
+                    name: SPENT_TIME
+                    type: bigint
+                    constraints:
+                      nullable: false
+                - column:
+                    name: STATUS
+                    type: int
+                    constraints:
+                      nullable: false
